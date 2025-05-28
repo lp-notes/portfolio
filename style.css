@@ -1,0 +1,89 @@
+/* Reset & basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #000;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6f61;
+}
+
+/* Sections */
+section {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 3px solid #ff6f61;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #ff6f61;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
